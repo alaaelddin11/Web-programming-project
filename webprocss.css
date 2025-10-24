@@ -1,0 +1,120 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.top-right {
+    position: absolute;   
+    top: 10px;            
+    left: 10px;          
+    width: 90px;         
+    border-radius: 50%;   
+    object-fit: cover;   
+    border: 3px solid #333; 
+}
+
+.red-line {
+    position: absolute;   /* allows you to place it exactly where you want */
+    top: 120px;           /* distance from the top */
+    left: 0px;          /* distance from the left */
+    width: 1600px;         /* line length */
+    height: 50px;          /* line thickness */
+    background-color: rgb(255, 0, 0); /* line color */
+}
+
+
+.moving-text {
+  position: absolute;
+  top: 5px;                /* place text slightly above or on the line */
+  white-space: nowrap;       /* keep text on one line */
+  color: rgb(9, 8, 8);
+  font-weight: bold;   /* makes text bold */
+  font-size: 30px;     /* makes text 30px large */
+  animation: moveText 25s linear infinite; /* continuous loop */
+}
+
+@keyframes moveText {
+  0% {
+    left: 100%;    /* start off the right side */
+  }
+  100% {
+    left: -100%;   /* exit completely on the left side */
+  }
+}
+
+/* Car Type BOX */
+.posatin-box1 {
+  position: absolute;
+  top: 220px;      /* was 210px + 10 */
+  left: 17%;       /* was 12% + 5 */
+  transform: translateX(-50%);
+}
+
+/* Country BOX */
+.posatin-box2 {
+  position: absolute;
+  top: 220px;      /* was 210px + 10 */
+  left: 30%;       /* was 25% + 5 */
+  transform: translateX(-50%);
+}
+
+/* CC BOX */
+.posatin-box3 {   
+  position: absolute;
+  top: 220px;      /* was 210px + 10 */
+  left: 43%;       /* was 38% + 5 */
+  transform: translateX(-50%);
+}
+
+/* Brand BOX */
+.posatin-box4 {
+  position: absolute;
+  top: 220px;      /* was 210px + 10 */
+  left: 56%;       /* was 51% + 5 */
+  transform: translateX(-50%);
+}
+
+/* PRICE BOX */
+.posatin-box5 {
+  position: absolute;
+  top: 220px;      /* was 210px + 10 */
+  left: 73%;       /* was 68% + 5 */
+  transform: translateX(-50%);
+}
+
+
+
+.selector-box {
+  text-align: center;
+  color: rgb(2, 2, 2);
+  font-weight: bold;
+}
+
+.selector-box select {
+  padding: 8px 1px;
+  border: 2px solid red;      /* matches your red line */
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.selector-box select:hover {
+  border-color: darkred;
+  background-color: #f8f8f8;
+}
