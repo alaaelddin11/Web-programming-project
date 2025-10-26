@@ -1,120 +1,144 @@
+/* General Style */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffffff, #f1f1f1);
+  color: #222;
+  overflow-x: hidden;
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Logo hover animation */
 .top-right {
-    position: absolute;   
-    top: 10px;            
-    left: 10px;          
-    width: 90px;         
-    border-radius: 50%;   
-    object-fit: cover;   
-    border: 3px solid #333; 
+  position: absolute;
+  top: 65px;
+  left: 16px;
+  width: 90px;
+  border-radius: 50%;
+  border: 3px solid #d90429;
+  box-shadow: 0 0 10px rgba(217, 4, 41, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* smooth animation */
 }
 
+.top-right:hover {
+  transform: scale(1.2); /* makes it 20% bigger */
+  box-shadow: 0 0 25px rgba(217, 4, 41, 0.7);
+}
+
+
+/* Red Banner */
 .red-line {
-    position: absolute;   /* allows you to place it exactly where you want */
-    top: 120px;           /* distance from the top */
-    left: 0px;          /* distance from the left */
-    width: 1600px;         /* line length */
-    height: 50px;          /* line thickness */
-    background-color: rgb(255, 0, 0); /* line color */
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #d90429;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
-
 
 .moving-text {
   position: absolute;
-  top: 5px;                /* place text slightly above or on the line */
-  white-space: nowrap;       /* keep text on one line */
-  color: rgb(9, 8, 8);
-  font-weight: bold;   /* makes text bold */
-  font-size: 30px;     /* makes text 30px large */
-  animation: moveText 25s linear infinite; /* continuous loop */
+  white-space: nowrap;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  animation: moveText 18s linear infinite;
 }
 
 @keyframes moveText {
-  0% {
-    left: 100%;    /* start off the right side */
-  }
-  100% {
-    left: -100%;   /* exit completely on the left side */
-  }
+  0% { left: 100%; }
+  100% { left: -100%; }
 }
 
-/* Car Type BOX */
-.posatin-box1 {
-  position: absolute;
-  top: 220px;      /* was 210px + 10 */
-  left: 17%;       /* was 12% + 5 */
-  transform: translateX(-50%);
+/* Main Box */
+.main-container {
+  margin-top: 120px;
+  text-align: center;
 }
 
-/* Country BOX */
-.posatin-box2 {
-  position: absolute;
-  top: 220px;      /* was 210px + 10 */
-  left: 30%;       /* was 25% + 5 */
-  transform: translateX(-50%);
+.title {
+  font-size: 32px;
+  color: #d90429;
+  margin-bottom: 40px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
-/* CC BOX */
-.posatin-box3 {   
-  position: absolute;
-  top: 220px;      /* was 210px + 10 */
-  left: 43%;       /* was 38% + 5 */
-  transform: translateX(-50%);
+/* Selectors Layout */
+.selectors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 40px;
 }
-
-/* Brand BOX */
-.posatin-box4 {
-  position: absolute;
-  top: 220px;      /* was 210px + 10 */
-  left: 56%;       /* was 51% + 5 */
-  transform: translateX(-50%);
-}
-
-/* PRICE BOX */
-.posatin-box5 {
-  position: absolute;
-  top: 220px;      /* was 210px + 10 */
-  left: 73%;       /* was 68% + 5 */
-  transform: translateX(-50%);
-}
-
-
 
 .selector-box {
-  text-align: center;
-  color: rgb(2, 2, 2);
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px 20px;
+  transition: transform 0.3s ease;
+}
+
+.selector-box:hover {
+  transform: scale(1.05);
+}
+
+.selector-box label {
+  display: block;
   font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
 }
 
 .selector-box select {
-  padding: 8px 1px;
-  border: 2px solid red;      /* matches your red line */
+  padding: 8px 10px;
+  border: 2px solid #d90429;
   border-radius: 8px;
-  background-color: #ffffff;
-  color: #333;
   font-size: 16px;
-  cursor: pointer;
   outline: none;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .selector-box select:hover {
-  border-color: darkred;
-  background-color: #f8f8f8;
+  background: #f9f9f9;
+  border-color: #b1001b;
+}
+
+/* Search Button */
+.search-btn {
+  padding: 12px 40px;
+  background-color: #d90429;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(217,4,41,0.4);
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #b1001b;
+  transform: scale(1.05);
+}
+
+
+
+.spin {
+    width: 60px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.logo {
+    width: 100px;   /* Increase this value to make it bigger */
+    height: auto;   /* Keeps the aspect ratio */
 }

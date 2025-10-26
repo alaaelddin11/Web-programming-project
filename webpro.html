@@ -1,102 +1,105 @@
-<html>
-<head> 
-    <title>CarMasr</title>
-
-    <link rel="stylesheet" href="webprocss.css">
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarMasr</title>
+  <link rel="stylesheet" href="webprocss.css">
 </head>
 
 <body>
-    <img src="mywebpho.png" alt="My Photo" class="top-right">
+  <!-- Logo / Personal Photo -->
+  <img src="mywebpho.png" alt="My Photo" class="top-right">
 
-    <div class="red-line">
+  <!-- Red Line with Moving Text -->
+  <div class="red-line">
     <span class="moving-text">🚗 Welcome to CarMasr — Find Your Perfect Car in Egypt! 🚗</span>
-    
-    </div>
+  </div>
 
-    <div class="selector-box posatin-box1 ">
+  <!-- Main Content Box -->
+  <div class="main-container">
+    <h1 class="title">🔍 Find Your Dream Car</h1>
+
+    <div class="selectors">
+      <div class="selector-box">
         <label for="car-type">Car Type:</label>
         <select id="car-type" name="car-type">
-            <option value="any thing">any thing</option>
-            <option value="sedan">Sedan</option>
-            <option value="suv">SUV</option>
-            <option value="coupe">Coupe</option>
-
+          <option value="any">Any Type</option>
+          <option value="sedan">Sedan</option>
+          <option value="suv">SUV</option>
+          <option value="coupe">Coupe</option>
         </select>
+      </div>
+
+      <div class="selector-box">
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+          <option value="any">Any Country</option>
+          <option value="japan">Japan</option>
+          <option value="southkorea">South Korea</option>
+          <option value="france">France</option>
+          <option value="germany">Germany</option>
+          <option value="usa">United States</option>
+          <option value="china">China</option>
+        </select>
+      </div>
+
+      <div class="selector-box">
+        <label for="engine">Engine Capacity (CC):</label>
+        <select id="engine" name="engine">
+          <option value="any">Any Capacity</option>
+          <option value="0-1500">0 - 1500 cc</option>
+          <option value="1501-1600">1501 - 1600 cc</option>
+          <option value="1601-2000">1601 - 2000 cc</option>
+          <option value="above-2000">Above 2000 cc</option>
+          <option value="electric">Electric ⚡</option>
+        </select>
+      </div>
+
+      <div class="selector-box">
+        <label for="brand">Brand:</label>
+        <select id="brand" name="brand">
+          <option value="any">Any Brand</option>
+          <option value="toyota">Toyota</option>
+          <option value="mitsubishi">Mitsubishi</option>
+          <option value="nissan">Nissan</option>
+          <option value="hyundai">Hyundai</option>
+          <option value="kia">Kia</option>
+          <option value="peugeot">Peugeot</option>
+          <option value="renault">Renault</option>
+          <option value="bmw">BMW</option>
+          <option value="mercedes-benz">Mercedes-Benz</option>
+          <option value="chevrolet">Chevrolet</option>
+          <option value="ford">Ford</option>
+          <option value="audi">Audi</option>
+          <option value="volkswagen">Volkswagen</option>
+          <option value="mazda">Mazda</option>
+          <option value="geely">Geely</option>
+        </select>
+      </div>
+
+      <div class="selector-box">
+        <label for="price">Price (EGP):</label>
+        <select id="price" name="price">
+          <option value="any">Any Price</option>
+          <option value="0-500k">0 - 500,000</option>
+          <option value="500001-1m">500,001 - 1,000,000</option>
+          <option value="1000001-1_5m">1,000,001 - 1,500,000</option>
+          <option value="1500001-2m">1,500,001 - 2,000,000</option>
+          <option value="2000001-2_5m">2,000,001 - 2,500,000</option>
+          <option value="2500001-3m">2,500,001 - 3,000,000</option>
+          <option value="above-3m">Above 3,000,000 💸</option>
+        </select>
+      </div>
     </div>
 
-
-    <div class="selector-box posatin-box2">
-    <label for="country">Country:</label>
-    <select id="country" name="country">
-        <option value="any">Any Country</option>
-        <option value="japan">Japan</option>
-        <option value="southkorea">South Korea</option>
-        <option value="france">France</option>
-        <option value="germany">Germany</option>
-        <option value="usa">United States</option>
-        <option value="china">China</option>
-    </select>
-</div>
-
-
-<div class="selector-box posatin-box3 ">
-    <label for="engine">CC:</label>
-    <select id="engine" name="engine">
-        <option value="any">Any Capacity</option>
-        <option value="0-1500">0 - 1500 cc</option>
-        <option value="1501-1600">1501 - 1600 cc</option>
-        <option value="1601-2000">1601 - 2000 cc</option>
-        <option value="above-2000">Above 2000 cc</option>
-        <option value="electric">Electric ⚡</option>
-    </select>
-</div>
-
-
-
-<div class="selector-box posatin-box4">
-    <label for="brand">Brand:</label>
-    <select id="brand" name="brand">
-        <option value="any">Any Brand</option>
-        <option value="toyota">Toyota</option>
-        <option value="mitsubishi">Mitsubishi</option>
-        <option value="nissan">Nissan</option>
-        <option value="hyundai">Hyundai</option>
-        <option value="kia">Kia</option>
-        <option value="peugeot">Peugeot</option>
-        <option value="renault">Renault</option>
-        <option value="bmw">BMW</option>
-        <option value="mercedes-benz">Mercedes-Benz</option>
-        <option value="chevrolet">Chevrolet</option>
-        <option value="ford">Ford</option>
-        <option value="audi">Audi</option>
-        <option value="volkswagen">Volkswagen</option>
-        <option value="mazda">Mazda</option>
-        <option value="geely">Geely</option>
-    </select>
-</div>
-
-
-<div class="selector-box posatin-box5 ">
-    <label for="price">Price:</label>
-    <select id="price" name="price">
-        <option value="any">Any Price</option>
-        <option value="0-500k">0 - 500,000 EGP</option>
-        <option value="500001-1m">500,001 - 1,000,000 EGP</option>
-        <option value="1000001-1_5m">1,000,001 - 1,500,000 EGP</option>
-        <option value="1500001-2m">1,500,001 - 2,000,000 EGP</option>
-        <option value="2000001-2_5m">2,000,001 - 2,500,000 EGP</option>
-        <option value="2500001-3m">2,500,001 - 3,000,000 EGP</option>
-        <option value="above-3m">Above 3,000,000 EGP 💸</option>
-    </select>
-</div>
-
-
-
-
-
-
+    <button class="search-btn">Search Cars</button>
+  </div>
 </body>
 </html>
+
+
+<div class="loader">
+    <img src="wheel.png" alt="loading" class="spin logo">
+<p style="font-size: 20px; font-weight: bold;">Loading...</p>
+</div>
