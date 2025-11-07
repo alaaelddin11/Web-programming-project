@@ -78,28 +78,39 @@
         </select>
       </div>
 
-      <div class="selector-box">
-        <label for="price">Price (EGP):</label>
-        <select id="price" name="price">
-          <option value="any">Any Price</option>
-          <option value="0-500k">0 - 500,000</option>
-          <option value="500001-1m">500,001 - 1,000,000</option>
-          <option value="1000001-1_5m">1,000,001 - 1,500,000</option>
-          <option value="1500001-2m">1,500,001 - 2,000,000</option>
-          <option value="2000001-2_5m">2,000,001 - 2,500,000</option>
-          <option value="2500001-3m">2,500,001 - 3,000,000</option>
-          <option value="above-3m">Above 3,000,000 💸</option>
-        </select>
-      </div>
-    </div>
+  <div class="selector-box">
+    <label for="price">Price (EGP):</label>
+    <select id="price" name="price">
+      <option value="any">Any Price</option>
+      <option value="0-500000">0 - 500,000</option>
+      <option value="500001-1000000">500,001 - 1,000,000</option>
+      <option value="1000001-1500000">1,000,001 - 1,500,000</option>
+      <option value="1500001-2000000">1,500,001 - 2,000,000</option>
+      <option value="2000001-2500000">2,000,001 - 2,500,000</option>
+      <option value="2500001-3000000">2,500,001 - 3,000,000</option>
+      <option value="above-3m">Above 3,000,000 💸</option>
+    </select>
+  </div>
 
     <button class="search-btn">Search Cars</button>
   </div>
+
+  
+  <div id="car-gallery" class="car-gallery"></div>
+
+  <!-- 🔹 Popup for car details -->
+<div id="car-modal" class="car-modal">
+  <div class="car-modal-content">
+    <span class="close-btn">&times;</span>
+    <img id="modal-img" src="" alt="Car photo">
+    <h2 id="modal-name"></h2>
+    <p id="modal-info"></p>
+  </div>
+</div>
+
+
+
+  <script src="webjs.js"></script>
 </body>
 </html>
 
-
-<div class="loader">
-    <img src="wheel.png" alt="loading" class="spin logo">
-<p style="font-size: 20px; font-weight: bold;">Loading...</p>
-</div>

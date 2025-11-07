@@ -142,3 +142,124 @@ body {
     width: 100px;   /* Increase this value to make it bigger */
     height: auto;   /* Keeps the aspect ratio */
 }
+
+
+
+
+
+/* --- Car Gallery --- */
+
+.car-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+
+.car-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(217, 4, 41, 0.4);
+}
+
+.car-card img {
+  width: 100%;
+  height: 180px;              /* 👈 fixes all images to same height */
+  object-fit: contain;        /* 👈 keeps full car visible */
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+.car-card h3 {
+  margin-top: 10px;
+  color: #d90429;
+  font-size: 18px;
+  height: 45px;              /* fixed title area */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+
+
+
+/* --- Popup Modal --- */
+.car-modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.car-modal-content {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  animation: popIn 0.3s ease;
+}
+
+.car-modal-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+
+
+
+/* Make the close button appear INSIDE the popup box */
+.car-modal-content {
+  position: relative; /* ⬅️ important so child (close-btn) stays inside */
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  animation: popIn 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #d90429;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+  color: #b1001b;
+}
+
+
+
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
