@@ -48,7 +48,112 @@ const cars = [
     Brand: "Mitsubishi",
     image: "cars/Attrage_2025.png",
     info: "Reliable sedan from Japan, 1500cc engine."
-  }
+  },
+  {
+  name: "Jetour T1 2025",
+  type: "suv",
+  country: "china",
+  engine: "1500",
+  price: "1150000",
+  Brand: "jetour",
+  image: "cars/jetoure_t1_2025.png",
+  info: "Compact SUV from China with a 1500cc turbo engine producing about 156 hp. Spacious interior and great value for money."
+}
+,
+{
+  name: "Jetour T2 2025",
+  type: "suv",
+  country: "china",
+  engine: "2000",
+  price: "1900000",
+  Brand: "jetour",
+  image: "cars/jetoure_t2_2025.png",
+  info: "Mid-size SUV equipped with a 2.0L turbo engine (254 hp). Strong performance, premium cabin, and modern tech features."
+}
+,
+{
+  name: "Jetour X70plus 2025",
+  type: "suv",
+  country: "china",
+  engine: "1500",
+  price: "1350000",
+  Brand: "jetour",
+  image: "cars/jetoure_x70plus_2025.png",
+  info: "7-seater SUV featuring a 1500cc turbo engine (154 hp). Known for practicality, large cabin, and family-friendly design."
+}
+,
+{
+  name: "Jetour X90plus 2025",
+  type: "suv",
+  country: "china",
+  engine: "1500",
+  price: "1600000",
+  Brand: "jetour",
+  image: "cars/jetoure_x90plus_2025.png",
+  info: "Large SUV with a roomy 7-seat layout, 1500cc turbo engine, and luxury-inspired interior. Excellent choice for big families."
+}
+,
+{
+  name: "Jetour Dashing 2025",
+  type: "suv",
+  country: "china",
+  engine: "1500",
+  price: "1400000",
+  Brand: "jetour",
+  image: "cars/jetoure_dashing_2025.png",
+  info: "Sporty modern SUV with a futuristic design, 1500cc turbo engine (156 hp), panoramic screen, and advanced driver tech."
+}
+,{
+  name: "Jetour X70 2025",
+  type: "suv",
+  country: "china",
+  engine: "1500",
+  price: "1350000",
+  Brand: "jetour",
+  image: "cars/jetoure_x70FL_2025.png",
+  info: "7-seater SUV featuring a 1500cc turbo engine (154 hp). Known for practicality, large cabin, and family-friendly design."
+},
+{
+  name: "Mercedes CLE Coupe 2025",
+  type: "coupe",
+  country: "germany",
+  engine: "2000",
+  price: "3800000",
+  Brand: "mercedes-benz",
+  image: "cars/mercedes_CLE_Coupe_2025.png",
+  info: "Luxury coupe with a 2.0L turbo engine delivering refined performance, sporty handling, and a premium interior design."
+}
+,{
+  name: "Mercedes G-Class 2025",
+  type: "suv",
+  country: "germany",
+  engine: "4000",
+  price: "17000000",
+  Brand: "mercedes-benz",
+  image: "cars/mercedes_G_Class_2025.png",
+  info: "Iconic full-size SUV powered by a 4.0L twin-turbo V8 (577 hp). Known for its durability, luxury cabin, and legendary off-road capability."
+}
+,{
+  name: "Mercedes GLC Coupe 2025",
+  type: "suv",
+  country: "germany",
+  engine: "2000",
+  price: "4200000",
+  Brand: "mercedes-benz",
+  image: "cars/mercedes_GLC_Coupe_2025.png",
+  info: "Premium SUV Coupe with a 2.0L turbo engine offering strong performance, modern technology, and stylish fastback design."
+}
+,{
+  name: "Mercedes S-Class 2025",
+  type: "sedan",
+  country: "germany",
+  engine: "3000",
+  price: "9500000",
+  Brand: "mercedes-benz",
+  image: "cars/mercedes_S_Class_2025.png",
+  info: "Flagship luxury sedan with a 3.0L mild-hybrid engine, world-class comfort, advanced tech, and unmatched interior refinement."
+}
+
 
 
 
@@ -128,9 +233,10 @@ document.querySelector(".search-btn").addEventListener("click", () => {
         const [min, max] = engine.split("-").map(v => parseInt(v));
         if (!(carEngine >= min && carEngine <= max)) match = false;
     } 
-    else if (engine === "above-2000" && carEngine <= 2000) {
+    else if (engine === "2001" && carEngine <= 2000) {
         match = false;
     }
+
     }
 
 
@@ -155,7 +261,9 @@ document.querySelector(".search-btn").addEventListener("click", () => {
     
 
     return match;
-  });
+  }
+
+);
 
   // Clear gallery and show filtered cars
   gallery.innerHTML = "";

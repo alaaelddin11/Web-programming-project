@@ -66,7 +66,7 @@ body {
   text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
-/* Selectors Layout */
+/* Selectors Layout lel box */
 .selectors {
   display: flex;
   flex-wrap: wrap;
@@ -85,8 +85,10 @@ body {
 
 .selector-box:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(217, 4, 41, 0.7);
 }
 
+/* alklam aly gow al boxes  */
 .selector-box label {
   display: block;
   font-weight: bold;
@@ -94,6 +96,7 @@ body {
   margin-bottom: 8px;
 }
 
+/* serch aly gow albox */
 .selector-box select {
   padding: 8px 10px;
   border: 2px solid #d90429;
@@ -128,11 +131,12 @@ body {
 }
 
 
-
+/* Loading Spinner */
 .spin {
     width: 60px;
     animation: spin 1s linear infinite;
 }
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -158,7 +162,7 @@ body {
   max-width: 1000px;
 }
 
-
+/* aletar 7walen al 3rabia */
 .car-card {
   background: white;
   border-radius: 12px;
@@ -175,18 +179,18 @@ body {
 
 .car-card img {
   width: 100%;
-  height: 180px;              /* 👈 fixes all images to same height */
-  object-fit: contain;        /* 👈 keeps full car visible */
+  height: 180px;              /*  fixes all images to same height */
+  object-fit: contain;        /* keeps full car visible */
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
-
+/* Title inside each car card */
 .car-card h3 {
   margin-top: 10px;
   color: #d90429;
   font-size: 18px;
-  height: 45px;              /* fixed title area */
+  height: 45px;              
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,7 +201,7 @@ body {
 
 
 
-/* --- Popup Modal --- */
+/* --- Popup Modal ---  lma ados 3la swort al3rabia */
 .car-modal {
   display: none; /* hidden by default */
   position: fixed;
@@ -209,6 +213,7 @@ body {
   z-index: 999;
 }
 
+/* albox aly btzhhar lma ados 3la al3rabiya */
 .car-modal-content {
   background: white;
   border-radius: 15px;
@@ -219,6 +224,7 @@ body {
   animation: popIn 0.3s ease;
 }
 
+/* al sora aly gow albox */
 .car-modal-content img {
   width: 100%;
   border-radius: 12px;
@@ -230,7 +236,7 @@ body {
 
 /* Make the close button appear INSIDE the popup box */
 .car-modal-content {
-  position: relative; /* ⬅️ important so child (close-btn) stays inside */
+  position: relative; /* ⬅ important so child (close-btn) stays inside */
   background: white;
   border-radius: 15px;
   padding: 25px;
@@ -240,6 +246,7 @@ body {
   animation: popIn 0.3s ease;
 }
 
+/* al zorar aly bymsa7 albox */
 .close-btn {
   position: absolute;
   top: 12px;
